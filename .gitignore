@@ -23,3 +23,8 @@
 hs_err_pid*
 replay_pid*
 /.idea/
+/.github/
+/.github/*
+/.github/*.*
+/.github/**.*
+/target/
