@@ -51,11 +51,10 @@ class Lesson3Test {
         assert squareRoots.length == 0
     }
 
-    @Test
+    @Test(expected = MissingMethodException.class)
     void 'return_exception-string_not_double'() {
         //x^2+2x+1=0
         Lesson3 lesson3 = new Lesson3()
         def squareRoots = lesson3.solveSquareRoot("str", 3.5, 4.1, 0e-5)
-        assert squareRoots.length == 0
     }
 }
