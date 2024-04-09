@@ -16,9 +16,10 @@
 
     <dependencies>
         <dependency>
-            <artifactId>groovy-all</artifactId>
             <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
             <version>4.0.20</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <artifactId>junit-jupiter-api</artifactId>
