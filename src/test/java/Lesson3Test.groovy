@@ -51,10 +51,24 @@ class Lesson3Test {
         assert squareRoots.length == 0
     }
 
-    @Test(expected = MissingMethodException.class)
-    void 'return_exception-string_not_double'() {
+    @Test(expected = IllegalArgumentException.class)
+    void 'return_exception-NaN'() {
         //x^2+2x+1=0
         Lesson3 lesson3 = new Lesson3()
-        def squareRoots = lesson3.solveSquareRoot("str", 3.5, 4.1, 0e-5)
+        def squareRoots = lesson3.solveSquareRoot(Double.NaN, 3.5, 4.1, 0e-5)
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    void 'return_exception-positivr_infinity'() {
+        //x^2+2x+1=0
+        Lesson3 lesson3 = new Lesson3()
+        def squareRoots = lesson3.solveSquareRoot(Double.POSITIVE_INFINITY, 3.5, 4.1, 0e-5)
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    void 'return_exception-negative_infinity'() {
+        //x^2+2x+1=0
+        Lesson3 lesson3 = new Lesson3()
+        def squareRoots = lesson3.solveSquareRoot(Double.NEGATIVE_INFINITY, 3.5, 4.1, 0e-5)
     }
 }
