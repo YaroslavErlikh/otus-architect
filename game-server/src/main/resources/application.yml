@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: game-server
+
+server:
+  port: 8081
+
+erlikh:
+  yaroslav:
+    auth:
+      uri: http://localhost:9000/auth/introspect
+      user: game
+      password: password
