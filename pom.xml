@@ -40,6 +40,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <artifactId>spock-core</artifactId>
+            <groupId>org.spockframework</groupId>
+            <version>2.4-M4-groovy-4.0</version>
+          </dependency>
+          <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>5.11.0</version>
