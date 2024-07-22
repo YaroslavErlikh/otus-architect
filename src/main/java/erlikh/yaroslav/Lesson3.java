@@ -3,12 +3,13 @@ package erlikh.yaroslav;
 public class Lesson3 {
 
     public double[] solveSquareRoot(double a, double b, double c, double e) {
-        if (Double.isNaN(a) || Math.abs(a) <= e) {
+        if (Double.isNaN(a) || Math.abs(a) <= e
+                || a == Double.POSITIVE_INFINITY || a == Double.NEGATIVE_INFINITY) {
             throw new IllegalArgumentException("a is NaN or 0");
         }
         double D = b * b - 4 * a * c;
 
-        if (D > 0) {
+        if (D > e) {
             double x1 = (-b + Math.sqrt(D)) / (2 * a);
             double x2 = (-b - Math.sqrt(D)) / (2 * a);
             return new double[] {x1, x2};
